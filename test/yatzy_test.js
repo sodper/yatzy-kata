@@ -22,21 +22,26 @@ var yatzy = require('../lib/yatzy.js');
     test.ifError(value)
 */
 
-var scoreHelper = function (test, roll, category, score) {
+var testHelper = function (test, roll, category, score) {
   test.expect(1);
   test.equal(yatzy.score(roll, category), score, 'should be ' + score);
   test.done();
 };
 
 exports['yatzy-score'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
   '5,6,5,5,2 on fives': function(test) {
-    scoreHelper(test, [5,6,5,5,2], 'fives', 15);
+    testHelper(test, [5,6,5,5,2], 'fives', 15);
   },
   '1,1,2,4,4 on fours': function(test) {
-    scoreHelper(test, [1,1,2,4,4], 'fours', 8);
+    testHelper(test, [1,1,2,4,4], 'fours', 8);
+  },
+  '1,3,2,3,4 on threes': function(test) {
+    testHelper(test, [1,3,2,3,3], 'threes', 9);
+  },
+  '2,3,2,5,1 on twos': function(test) {
+    testHelper(test, [2,3,2,5,1], 'twos', 4);
+  },
+  '3,3,3,4,5 on ones': function(test) {
+    testHelper(test, [3,3,3,4,5], 'ones', 0);
   },
 };
