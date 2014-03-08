@@ -56,4 +56,10 @@ exports['yatzy-score'] = {
   '3,3,3,4,5 on ones': function(test) {
     testHelper(test, [3,3,3,4,5], 'ones', 0);
   },
+  '3,3,3,4,4 on pair': function(test) {
+    testHelper(test, [3,3,3,4,4], 'pair', 8);
+  },
+  '1,1,6,2,6 on pair': function(test) {
+    testHelper(test, [1,1,6,2,6], 'pair', 12);
+  }
 };
