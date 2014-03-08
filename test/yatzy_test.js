@@ -35,6 +35,12 @@ exports['yatzy-score'] = {
   '4,5,5,6,1 on chance': function(test) {
     testHelper(test, [4,5,5,6,1], 'chance', 21);
   },
+  '1,1,1,1,1 on yatzy': function(test) {
+    testHelper(test, [1,1,1,1,1], 'yatzy', 50);
+  },
+  '1,1,1,2,1 on yatzy': function(test) {
+    testHelper(test, [1,1,1,2,1], 'yatzy', 0);
+  },
   '5,6,5,5,2 on fives': function(test) {
     testHelper(test, [5,6,5,5,2], 'fives', 15);
   },
