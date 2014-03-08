@@ -29,6 +29,12 @@ var testHelper = function (test, roll, category, score) {
 };
 
 exports['yatzy-score'] = {
+  '1,1,3,3,6 on chance': function(test) {
+    testHelper(test, [1,1,3,3,6], 'chance', 14);
+  },
+  '4,5,5,6,1 on chance': function(test) {
+    testHelper(test, [4,5,5,6,1], 'chance', 21);
+  },
   '5,6,5,5,2 on fives': function(test) {
     testHelper(test, [5,6,5,5,2], 'fives', 15);
   },
