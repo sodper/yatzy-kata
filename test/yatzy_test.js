@@ -82,3 +82,9 @@ exports.threeOfKind = {
     testHelper(test, [3,3,3,3,1], 'three of a kind', 0);
   }
 };
+
+exports.fourOfKind = {
+  '2,2,2,2,5 on four of a kind': function(test) {
+    testHelper(test, [2,2,2,2,5], 'four of a kind', 8);
+  }
+};
