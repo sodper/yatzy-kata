@@ -28,19 +28,25 @@ var testHelper = function (test, roll, category, score) {
   test.done();
 };
 
-exports['yatzy-score'] = {
+exports.chance = {
   '1,1,3,3,6 on chance': function(test) {
     testHelper(test, [1,1,3,3,6], 'chance', 14);
   },
   '4,5,5,6,1 on chance': function(test) {
     testHelper(test, [4,5,5,6,1], 'chance', 21);
-  },
+  }
+};
+
+exports.yatzy = {
   '1,1,1,1,1 on yatzy': function(test) {
     testHelper(test, [1,1,1,1,1], 'yatzy', 50);
   },
   '1,1,1,2,1 on yatzy': function(test) {
     testHelper(test, [1,1,1,2,1], 'yatzy', 0);
-  },
+  }
+};
+
+exports.die = {
   '5,6,5,5,2 on fives': function(test) {
     testHelper(test, [5,6,5,5,2], 'fives', 15);
   },
@@ -55,11 +61,20 @@ exports['yatzy-score'] = {
   },
   '3,3,3,4,5 on ones': function(test) {
     testHelper(test, [3,3,3,4,5], 'ones', 0);
-  },
+  }
+};
+
+exports.pair = {
   '3,3,3,4,4 on pair': function(test) {
     testHelper(test, [3,3,3,4,4], 'pair', 8);
   },
   '1,1,6,2,6 on pair': function(test) {
     testHelper(test, [1,1,6,2,6], 'pair', 12);
+  },
+  '3,3,3,4,1 on pair': function(test) {
+    testHelper(test, [3,3,3,4,1], 'pair', 0);
+  },
+  '3,3,3,3,1 on pair': function(test) {
+    testHelper(test, [3,3,3,3,1], 'pair', 0);
   }
 };
