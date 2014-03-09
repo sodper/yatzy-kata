@@ -62,5 +62,8 @@ exports.pair = {
 exports.twoPair = {
   '1,1,2,3,3 on two pairs': function(test) {
     testHelper(test, [1,1,2,3,3], 'two pairs', 8);
+  },
+  '1,1,2,3,4 on two pairs': function(test) {
+    testHelper(test, [1,1,2,3,4], 'two pairs', 0);
   }
 };
