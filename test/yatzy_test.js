@@ -112,3 +112,15 @@ exports.largeStraight = {
     testHelper(test, [1,3,4,5,6], 'large straight', 0);
   }
 };
+
+exports.largeStraight = {
+  '1,1,2,2,2 on full house': function(test) {
+    testHelper(test, [1,1,2,2,2], 'full house', 8);
+  },
+  '2,2,3,3,4 on full house': function(test) {
+    testHelper(test, [2,2,3,3,4], 'full house', 0);
+  },
+  '4,4,4,4,4 on full house': function(test) {
+    testHelper(test, [4,4,4,4,4], 'full house', 0);
+  }
+};
