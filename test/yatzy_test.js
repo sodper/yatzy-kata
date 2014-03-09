@@ -103,3 +103,12 @@ exports.smallStraight = {
     testHelper(test, [1,2,3,4,6], 'small straight', 0);
   }
 };
+
+exports.largeStraight = {
+  '2,3,4,5,6 on large straight': function(test) {
+    testHelper(test, [2,3,4,5,6], 'large straight', 20);
+  },
+  '1,3,4,5,6 on large straight': function(test) {
+    testHelper(test, [1,3,4,5,6], 'large straight', 0);
+  }
+};
