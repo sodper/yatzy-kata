@@ -58,3 +58,9 @@ exports.pair = {
     testHelper(test, [3,3,3,3,1], 'pair', 0);
   }
 };
+
+exports.twoPair = {
+  '1,1,2,3,3 on two pairs': function(test) {
+    testHelper(test, [1,1,2,3,3], 'two pairs', 8);
+  }
+};
