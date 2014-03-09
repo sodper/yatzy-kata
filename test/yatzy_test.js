@@ -65,5 +65,20 @@ exports.twoPair = {
   },
   '1,1,2,3,4 on two pairs': function(test) {
     testHelper(test, [1,1,2,3,4], 'two pairs', 0);
+  },
+  '1,1,2,2,2 on two pairs': function(test) {
+    testHelper(test, [1,1,2,2,2], 'two pairs', 0);
+  }
+};
+
+exports.threeOfKind = {
+  '3,3,3,4,5 on three of a kind': function(test) {
+    testHelper(test, [3,3,3,4,5], 'three of a kind', 9);
+  },
+  '3,3,4,5,6 on three of a kind': function(test) {
+    testHelper(test, [3,3,4,5,6], 'three of a kind', 0);
+  },
+  '3,3,3,3,1 on three of a kind': function(test) {
+    testHelper(test, [3,3,3,3,1], 'three of a kind', 0);
   }
 };
