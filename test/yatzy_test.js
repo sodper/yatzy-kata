@@ -94,3 +94,12 @@ exports.fourOfKind = {
     testHelper(test, [2,2,2,2,2], 'four of a kind', 0);
   }
 };
+
+exports.smallStraight = {
+  '1,2,3,4,5 on small straight': function(test) {
+    testHelper(test, [1,2,3,4,5], 'small straight', 15);
+  },
+  '1,2,3,4,6 on small straight': function(test) {
+    testHelper(test, [1,2,3,4,6], 'small straight', 0);
+  }
+};
